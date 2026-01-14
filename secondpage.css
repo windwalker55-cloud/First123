@@ -1,0 +1,176 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(145deg, #1a1d2c 0%, #2d1b3d 100%);
+            color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #a0a0c0;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .papers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 80px;
+        }
+
+        .paper-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 32px 24px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        .paper-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .year {
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .practice-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+
+        .practice-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 32px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+            color: #8a8aa3;
+            line-height: 1.6;
+            margin-bottom: 4px;
+        }
+
+        .footer-content p:first-child {
+            color: #b0b0d0;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        /* Decorative elements */
+        .accent-line {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, #6a5af8, #a855f7);
+            margin: 0 auto 24px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 32px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .papers-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .paper-card {
+                padding: 28px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 24px 16px;
+            }
+            
+            .year {
+                font-size: 2.4rem;
+            }
+            
+            .practice-btn {
+                padding: 12px 24px;
+            }
+        }

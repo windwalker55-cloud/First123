@@ -1,0 +1,178 @@
+   *
+ {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+ }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(145deg, #1a1d2c 0%, #2d1b3d 100%);
+            color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        .welcome-container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .welcome-header {
+            margin-bottom: 40px;
+        }
+
+        .welcome-header h1 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .course-code {
+            font-size: 5.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 20px 0 50px;
+            letter-spacing: -2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .course-code::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #6a5af8, #a855f7);
+            border-radius: 2px;
+        }
+
+        .start-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 48px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .start-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .start-btn:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .start-btn:hover::before {
+            left: 100%;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a0a0c0;
+            font-weight: 300;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 32px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+            color: #8a8aa3;
+            line-height: 1.6;
+            margin-bottom: 4px;
+        }
+
+        .footer-content p:first-child {
+            color: #b0b0d0;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 32px 20px;
+            }
+            
+            .welcome-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .course-code {
+                font-size: 4.5rem;
+            }
+            
+            .start-btn {
+                padding: 16px 40px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 24px 16px;
+            }
+            
+            .welcome-header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .course-code {
+                font-size: 3.8rem;
+            }
+            
+            .start-btn {
+                padding: 14px 32px;
+            }
+        }
+    
