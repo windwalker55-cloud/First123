@@ -13,47 +13,49 @@
         <header class="header">
             <div id="timer" class="timer">45:00</div>
             <h1>STA223 Examination Question</h1>
-            <div class="score-display">Question 1 of 20</div>
+            <div class="score-display" id="score-display">Question 1 of 20</div>
         </header>
 
         <div class="question-container">
             <div class="question-area">
-                <div class="question-text">
+                <div class="question-text" id="question">
                     Area where questions will be displayed.....................................................................................................
                 </div>
                 
                 <div class="options-container">
                     <div class="option-row">
                         <div class="option-label">a</div>
-                        <div class="option-text">First option text will appear here</div>
+                        <div class="option-text" id="Firstoption">First option text will appear here</div>
                     </div>
                     
                     <div class="option-row">
                         <div class="option-label">b</div>
-                        <div class="option-text">Second option text will appear here</div>
+                        <div class="option-text"  id="secondoption">Second option text will appear here</div>
                     </div>
                     
                     <div class="option-row">
                         <div class="option-label">c</div>
-                        <div class="option-text">Third option text will appear here</div>
+                        <div class="option-text" id="thirdoption">Third option text will appear here</div>
                     </div>
                     
                     <div class="option-row">
                         <div class="option-label">d</div>
-                        <div class="option-text">Fourth option text will appear here</div>
+                        <div class="option-text"  id="fourthoption">Fourth option text will appear here</div>
                     </div>
                 </div>
             </div>
 
             <div class="controls-container">
-                <button class="btn previous-btn">Previous</button>
+                <button class="btn previous-btn" id="previous">Previous</button>
                 <div class="submit-container">
-                    <button class="btn submit-btn">Submit</button>
+                    <button class="btn submit-btn" id="submit">Submit</button>
                 </div>
-                <button class="btn next-btn">Next</button>
+                <button class="btn next-btn" id="next">Next</button>
             </div>
         </div>
     </div>
    
+
+    <script src="index.js" type="module"></script>
 </body>
 </html>
