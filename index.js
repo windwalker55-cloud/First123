@@ -9,6 +9,3 @@ const fourthOption=document.getElementById("fourthoption")
 const previous=document.getElementById("previous")
 const submit=document.getElementById("submit")
 const next=document.getElementById("next")
-
-
-
